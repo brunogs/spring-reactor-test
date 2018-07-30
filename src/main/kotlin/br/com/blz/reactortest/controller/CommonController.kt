@@ -11,6 +11,7 @@ class CommonController {
 
     @GetMapping("/common/{x}")
     fun get(@PathVariable x: BigInteger): BigInteger {
+        Thread.sleep(100)
         return Fatorial.calculate(value = x)
     }
 
